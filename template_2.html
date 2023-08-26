@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/ef27bec5ef.js" crossorigin="anonymous"></script> -->
+    <!-- material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .container{
+            display:grid;
+            grid-template-rows:12% 88%;
+            grid-template-columns:20% 80%;
+            box-sizing: border-box;
+            height:100vh;
+            border:1px solid black;
+           /* margin:0px; */
+        }
+        .content1{
+            grid-area:1/1/2/2;
+            color:white;
+            display:flex;
+            /* justify-content: space-between; */
+            align-items:center;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .content2{
+            display:flex;
+            flex-direction: column;
+            grid-area:2/1/3/2;
+            background:black;
+            color:white;
+           box-sizing: border-box;
+           padding-top:5px;
+        }
+         
+        .content2  a{
+            display:block;
+            text-decoration: none;
+            font-size: 17px;
+            color:whitesmoke;
+           /* line-height: 2.5rem; */
+           padding-bottom:10px;
+           padding-top:10px; ;
+           /* padding:0px 0px 0px 15px;  */
+           padding-left:15px;
+           box-sizing: border-box;
+        
+        } 
+        .content2  a i{
+            padding-right:10px;
+            font-size: 14px;
+        }
+         /*.list li a:hover */
+         .content2  a:hover{
+            background-color:rgba(255,255,255,0.7);
+         }
+        
+        /* in content 3 we have a navbar  */
+        .content3{
+            
+            grid-area:1/2/2/3;
+            background-color: aliceblue;
+            /* padding:0px;
+            margin:0 auto;
+        }  */}
+
+        /* to create a navbar */
+        .nav_container{
+            
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+        } 
+       
+      .rightside li,.leftside li{
+         display:inline-block; 
+          padding:20px; 
+          margin-top:-12px;
+          /* padding-right:10px; */
+         
+
+     }
+     .rightside li a,.leftside li a{
+        text-decoration: none;
+        font-size: 20px;
+        color:black;
+        /* padding:10px 12px 10px 15px; */
+    }
+     .rightside li a:hover{
+           color:rgba(255,0,0,0.7)
+     }
+
+     /* navbar ended */
+        .content4{
+            grid-area:2/2/3/3;
+           
+        }
+        .nested{
+            box-sizing: border-box;
+            display:grid;
+            grid-template-rows:15% 10% 30% 45%;
+            grid-template-columns:25% 25% 25% 25%;
+           
+            
+             margin:10px 15px;
+           
+           
+        }
+      .para {
+        grid-area:2/1/3/5;
+        background-color:lightgreen;
+        color:#1f3;
+       font-size: 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+         padding: 10px; 
+         margin: 0px 5px; 
+       }
+       .c6{
+        grid-area:3/1/4/2;
+        background-color: #1f3;
+        
+         
+        /* align-items: center;   */
+     }
+        .c726{
+            grid-area:3/2/4/3;
+            background-color: rgba(0,0,0,0.8);
+            
+            /* display:flex;
+            align-items:center; */
+        }
+        .c95{
+            grid-area:3/3/4/4;
+            background-color: #ff0;
+            
+            /* display:flex;
+            align-items:center;  */
+        }
+        .c126{
+            grid-area:3/4/4/5;
+            background-color: tomato;
+            
+            /* display:flex;
+            align-items:center; */
+        }
+        .recent{
+            grid-area:4/1/5/3;
+            background-color: whitesmoke;
+            color:black;
+            /* display:flex;
+           flex-direction: column; */
+            margin:0px 5px;
+        }
+        .container_inv{
+            grid-area:4/3/5/5;
+            background-color: whitesmoke;
+            color:black;
+            /* display:flex;
+           flex-direction: column; */
+            margin:0px 5px;
+        }
+        .c6,.c726,.c95,.c126{
+            
+            margin:10px 5px;
+           color:white;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius:2%;
+            padding-left:30px;
+            padding-right:30px;
+            box-sizing: border-box;
+           
+            
+        }
+        .c6 span,.c726 span,.c95 span,.c126 span{
+            font-size:50px;
+           
+            
+        }  
+        .c6 i,.c726 i,.c95 i,.c126 i{
+            font-size:60px;
+            font-weight: lighter;
+            
+        }
+        
+         .space{
+            grid-area:1/1/2/5;
+            display:flex;
+            justify-content: space-between;
+             align-items: center; 
+           padding-bottom:25px;
+        }
+        .space li {
+            display:inline-block;
+            font-size:1rem;
+            padding:0px 5px;
+            
+        }
+        .space a{ 
+             color:rgba(0,0,0,0.5); 
+            text-decoration: none;
+            
+        } 
+        .space li i{
+            color:rgba(0,0,0,0.5); 
+            font-size: 15px;
+        }
+        .space>h1{
+            font-size:25px;
+             font-weight:lighter; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       
+        
+        .recent span{
+        width:35px;
+        height:20px;
+        background-color:green;
+        color:white;
+        border-radius: 40%;
+       /* box-sizing: border-box; */
+        padding:2px;  
+       text-align: center;
+        display: inline-block; 
+     }
+         .content1 span i{
+            padding: 0px 5px 0px 15px;
+            color:red;
+         }
+          .content2  span{
+            
+            background: green;
+             border-radius: 50%;
+             width:20px;
+             height:20px;
+             text-align: center;
+             display:inline-block;
+         } 
+         .nav_container .rightside i{
+            font-size: 10px;
+           
+            
+         }
+         /* add listing content styling in nav bar */
+         .leftside .add_list{
+            border:2px solid red;
+           border-radius: 250px 250px 250px 250px;
+            width:100%;
+           /* width:150px;  */
+           padding:10px;
+            box-sizing: border-box; 
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap:0.5rem;
+            color:red;
+         }
+         .leftside #plus{
+            border: 1px solid red;
+            /* color:red; */
+            border-radius:50%;
+            width:20px;
+            height:20px;
+            
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+         }
+         /* styling of img before my account */
+         .leftside img{
+            width:40px;
+            height:40px;
+            /* box-sizing: border-box; */
+            display: inline-block;
+            border-radius: 50%;
+            margin-bottom:-10px;
+         }
+         /* this code is for invoices block styling
+          for container class  */
+         /*sub lines in invoices   */
+    .one,.two{
+        padding-top:3px;
+        box-sizing: border-box;
+        gap:1rem;
+        color:grey;
+     } 
+    .one,.two,.first,.second{
+        display:flex;
+        align-items: center;
+        /* box-sizing:border-box; */
+    }
+    *{
+        margin:0%;
+    }
+    .inv,.rec,.first,.second{
+        padding:15px;
+        border-bottom:1px solid #dddddd;
+        box-sizing:border-box;
+    }
+    /* styling of icons in invoices */
+    .left i{
+        padding-left:10px;
+        padding-right:20px;
+        background-color:grey;
+        border-radius: 50%;
+        box-sizing: border-box;
+        text-align: center;
+        color:black;
+        width:35px;
+        height:35px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        .right{
+            margin-left:10px;
+        } 
+         .fa-angle-down{
+            position:relative;
+            bottom:2px;
+            font-size: 10px;
+        } 
+        .content2 .fa-angle-down{
+            position:relative;
+            left:50%;
+           bottom:5%;
+     }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content1">
+            <span style="font-family: 'Courier New', Courier, monospace; font-size: 30px;"><i class="fab fa-drupal"></i>Listeo</span>
+        </div>
+            
+        <div class="content2">
+                 <a href="#" style="color:rgba(255,255,255,0.5)">MAIN</a>
+              <a href="https://www.google.com"><i class="fas fa-gear"></i>Dashboard</a>
+              <a href="#"><i class="far fa-envelope-open"></i>Messages <span>2</span></a>
+              <a href="#"><i class="far fa-calendar-check"></i>Bookings</a>
+              <a href="#"><i class="fas fa-wallet"></i>Wallet</a>
+                <a href="#"  style="color:rgba(255,255,255,0.5)">LISTINGS</a>
+                <a href="#"><i class="fas fa-layer-group"></i>My Listings <i class="fas fa-angle-down"></i></a>
+                <a href="#"><i class="far fa-star"></i>Reviews</a>
+                <a href="#"><i class="far fa-heart"></i>Bookmarks</a>
+                <a href="#"><i class="fas fa-plus-circle"></i>Add Listing</a>
+              <a href="#"  style="color:rgba(255,255,255,0.5)">ACCOUNT</a>
+               <a href="#"><i class="far fa-user"></i>My Profile</a>
+               <a href="#"><i class="fas fa-power-off"></i>Logout</a>
+           
+        </div>
+        <div class="content3">
+             <nav class="nav_container">
+                <ul class="rightside">
+                     <li><a href="#">Home <i class="fas fa-angle-down"></i></a></li>
+                    <li><a href="#">Listings <i class="fas fa-angle-down"></i></a></li>
+                    <li><a href="#">User Panel <i class="fas fa-angle-down"></i></a></li>
+                    <li><a href="#">Pages <i class="fas fa-angle-down"></i></a></li>
+                </ul>
+                <ul class="leftside">
+                    <li><a href="#"><img src="profile.png" alt="">My Account <i class="fas fa-angle-down"></i></a></li>
+                    <li><a href="#"><div class="add_list"><p>Add Listing</p> 
+                                                            <p id="plus">+</p></div>
+                       </a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- nested div -->
+        <div class="nested">
+            <div class="space">
+                <h1 >Howdy, tom!</h1>
+            <ul>
+                <li> <a href="#">Home </a></li>
+                <li><i class="fas fa-angle-right"></i></li>
+                <li><a href="#">Dashboard</a></li>
+            </ul>
+             </div>
+            <!-- sub div's -->
+             <div class="para">
+                <p>your listing hotel govendor has been approved!</p>
+                <p>x</p>
+            </div>
+             <div class="c6">
+                <p><span>6</span><br>Active Listings</p>
+                <i class="fas fa-map"></i>
+              </div>
+              <div class="c726">
+                <p><span>726</span><br>Total Views</p>
+                <i class="fa fa-line-chart"></i>
+              </div>    
+              <div class="c95">
+                <p><span>95</span><br>Total Reviews</p>
+              <i class="far fa-heart"></i>
+              </div>
+              <div class="c126">
+                <p><span>126</span><br>Times Bookmarked</p>
+                <i class="far fa-heart"></i>
+              </div>
+    <div class="recent">
+            <div class="rec"> <b>Recent Activities</b></div>
+            <div class="first">
+            <div  class="left">
+                    <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="right">
+            <p></span>your listing <strong>Hotel Govendor</strong>has been approved</p>
+            </div>
+        </div>
+        <div class="second">
+            <div class="left">
+                <i class="far fa-star"></i>
+            </div>
+            <div class="right">
+               
+                <p></span>kathy brown left a review <span>5.0</span> on<strong> Burger House</strong></p> 
+            </div>
+        </div>            
+    </div>
+        <!-- this  code is for invoices block -->
+        <div class="container_inv">
+            <div class="inv"> <b>Invoices</b></div>
+            <div class="first">
+                 <div class="left">
+                     <i class="far fa-file"></i>
+                 </div>
+                <div class="right">
+                     <p><strong>Professional plan</strong></p>
+                     <div class="one">
+                     <p style="color:red">Unpaid</p>
+                     <p >|</p>
+                     <p>Order:#00124</p>
+                     <p >|</p>
+                     <p>Date:20/07/2019</p>
+                     </div>
+             </div>
+            </div>
+             <div class="second">
+               <div class="left">
+                     <i class="far fa-file "></i>
+                 </div>
+                 <div class="right">
+                     <p><strong>Extended Plan</strong></p>
+                     <div class="two">
+                         <p style="color:green">Paid</p>
+                         <p  >|</p>
+                         <p>Order:#00124</p>
+                         <p >|</p>
+                         <p>Date:14/07/2019</p>
+                     </div>
+                    </div>   
+    </div>
+    </div>
+    </div>
+</body>
+</html>
